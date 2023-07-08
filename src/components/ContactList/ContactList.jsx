@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contacts/operations';
-import { selectContacts, selectFilter } from 'redux/contacts/selectors';
+import { selectContacts, selectFilter } from '../../redux/contacts/selectors';
 
 import {
   ContactsList,
@@ -10,7 +10,7 @@ import {
   ContactsListInf,
   ContactsListButton,
 } from './ContactList.styled';
-import { fetchContacts } from 'redux/contacts/operations';
+import { fetchContacts } from '../../redux/contacts/operations';
 import { IoTrashBinOutline } from 'react-icons/io5';
 import { IconContext } from 'react-icons';
 import { MdContactPage } from 'react-icons/md';

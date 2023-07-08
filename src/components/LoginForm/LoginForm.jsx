@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/operations';
+import { logIn } from '../../redux/auth/operations';
 
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';

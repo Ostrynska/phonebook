@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
-import { logOut } from 'redux/auth/operations';
-import { useAuth } from 'hooks';
+import { logOut } from '../../redux/auth/operations';
+import { useAuth } from '../../hooks/index';
 
 import { Wrapper, Username, Name } from './UserMenu.styled';
 import Box from '@mui/material/Box';
