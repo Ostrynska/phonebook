@@ -1,9 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
 
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -12,6 +11,15 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import { theme } from '../App';
+
+import home from '../../images/auth.svg';
+
+import {
+  RegisterContainer,
+  AccountText,
+  LinkStyled,
+  FormControl,
+} from '../RegisterForm/RegisterForm.styled';
 
 export function LoginForm() {
   const dispatch = useDispatch();
@@ -29,57 +37,90 @@ export function LoginForm() {
   };
 
   return (
-    <Container component="main" maxWidth="xs" theme={theme}>
-      <CssBaseline />
+    <Container component="main" maxWidth="lg" theme={theme}>
       <Box
         sx={{
-          marginTop: 16,
+          marginTop: 26,
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: 'row',
           alignItems: 'center',
         }}
       >
-        <Avatar
-          sx={{ m: 1, bgcolor: 'primary.main', color: 'primary.contrastText' }}
-        ></Avatar>
-        <Typography component="h1" variant="h5">
-          Log in
-        </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            type="email"
-            autoComplete="email"
-            autoFocus
-          />
-          <TextField
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            endIcon={<ExitToAppOutlinedIcon />}
-            sx={{ mt: 2, mb: 2 }}
-          >
-            Log In
-          </Button>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'start',
+          }}
+        >
+          <RegisterContainer>
+            <h2>Welcome !</h2>
+            <Typography component="h1" variant="h5">
+              Sign in to
+            </Typography>
+            <p>MyContact is simply</p>
+            <Box
+              component="form"
+              noValidate
+              onSubmit={handleSubmit}
+              sx={{ mt: 3 }}
+            >
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <p>Email</p>
+                  <TextField
+                    required
+                    fullWidth
+                    id="email"
+                    placeholder="Enter your Email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <p>Password</p>
+                  <TextField
+                    required
+                    fullWidth
+                    name="password"
+                    placeholder="Enter your Password"
+                    type="password"
+                    id="password"
+                    autoComplete="new-password"
+                  />
+                </Grid>
+              </Grid>
+              <FormControl>
+                <FormControlLabel
+                  control={<Checkbox value="remember" color="primary" />}
+                  label="Remember me"
+                />
+              </FormControl>
+
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                endIcon={<ExitToAppOutlinedIcon />}
+                sx={{ mt: 5, mb: 3, width: '100%', height: '57px' }}
+              >
+                Login
+              </Button>
+              <AccountText>
+                Don’y have an Account ?
+                <LinkStyled to="/register"> Register here</LinkStyled>
+              </AccountText>
+            </Box>
+          </RegisterContainer>
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <img src={home} alt="Home" width={598} />
         </Box>
       </Box>
     </Container>

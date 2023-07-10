@@ -42,7 +42,13 @@ export default function Home() {
           >
             Simple - Intuitive - Efficeint
           </Typography>
-          <Typography component="p" variant=" h3" textAlign="center">
+          <Typography
+            component="p"
+            variant=" h3"
+            textAlign="center"
+            color="primary.light"
+            fontWeight={300}
+          >
             "Your phonebook should be easy to use and actually help you achieve
             maximum productivity without compromising on the look and feel"
           </Typography>

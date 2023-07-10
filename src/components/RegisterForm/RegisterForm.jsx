@@ -10,7 +10,13 @@ import Container from '@mui/material/Container';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import { theme } from '../App';
 
-import { RegisterContainer } from './RegisterForm.styled';
+import home from '../../images/auth.svg';
+
+import {
+  RegisterContainer,
+  AccountText,
+  LinkStyled,
+} from './RegisterForm.styled';
 
 export function RegisterForm() {
   const dispatch = useDispatch();
@@ -29,80 +35,97 @@ export function RegisterForm() {
   };
 
   return (
-    <Container component="main" maxWidth="xs" theme={theme}>
+    <Container component="main" maxWidth="lg" theme={theme}>
       <Box
         sx={{
-          marginTop: 16,
+          marginTop: 26,
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'start',
+          flexDirection: 'row',
+          alignItems: 'center',
         }}
       >
-        <RegisterContainer>
-          <p>Welcome !</p>
-          <Typography component="h1" variant="h5">
-            Sign up to
-          </Typography>
-          <p>MyContact is simply</p>
-          <Box
-            component="form"
-            noValidate
-            onSubmit={handleSubmit}
-            sx={{ mt: 3 }}
-          >
-            <Grid container spacing={2}>
-              <Grid item xs={12}>
-                <p>User name</p>
-                <TextField
-                  autoComplete="given-name"
-                  type="text"
-                  name="name"
-                  required
-                  fullWidth
-                  id="name"
-                  placeholder="Enter your email"
-                  autoFocus
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <p>Email</p>
-                <TextField
-                  required
-                  fullWidth
-                  id="email"
-                  placeholder="Enter your user name"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <p>Password</p>
-                <TextField
-                  required
-                  fullWidth
-                  name="password"
-                  placeholder="Enter your Password"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
-                />
-              </Grid>
-            </Grid>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              endIcon={<ExitToAppOutlinedIcon />}
-              sx={{ mt: 3, mb: 2 }}
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'start',
+          }}
+        >
+          <RegisterContainer>
+            <h2>Welcome !</h2>
+            <Typography component="h1" variant="h5">
+              Sign up to
+            </Typography>
+            <p>MyContact is simply</p>
+            <Box
+              component="form"
+              noValidate
+              onSubmit={handleSubmit}
+              sx={{ mt: 3 }}
             >
-              Register
-            </Button>
-            <p>
-              Already have an Account ? <span>Register</span>
-            </p>
-          </Box>
-        </RegisterContainer>
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <p>User name</p>
+                  <TextField
+                    autoComplete="given-name"
+                    type="text"
+                    name="name"
+                    required
+                    fullWidth
+                    id="name"
+                    placeholder="Enter your User name"
+                    autoFocus
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <p>Email</p>
+                  <TextField
+                    required
+                    fullWidth
+                    id="email"
+                    placeholder="Enter your Email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <p>Password</p>
+                  <TextField
+                    required
+                    fullWidth
+                    name="password"
+                    placeholder="Enter your Password"
+                    type="password"
+                    id="password"
+                    autoComplete="new-password"
+                  />
+                </Grid>
+              </Grid>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                endIcon={<ExitToAppOutlinedIcon />}
+                sx={{ mt: 5, mb: 3, width: '100%', height: '57px' }}
+              >
+                Register
+              </Button>
+              <AccountText>
+                Already have an Account ?
+                <LinkStyled to="/login"> Login here</LinkStyled>
+              </AccountText>
+            </Box>
+          </RegisterContainer>
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <img src={home} alt="Home" width={598} />
+        </Box>
       </Box>
     </Container>
   );
