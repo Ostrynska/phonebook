@@ -10,5 +10,5 @@ export const Username = styled.p``;
 
 export const Name = styled.span`
   font-weight: 700;
-  color: #d85841;
+  color: #6527be;
 `;

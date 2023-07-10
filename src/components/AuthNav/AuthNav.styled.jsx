@@ -4,10 +4,13 @@ import styled from 'styled-components';
 
 export const Link = styled(NavLink)`
   text-decoration: none;
-  color: #fff7e8;
+  color: #000;
   &.active {
     font-weight: 700;
-    color: #d85841;
+    color: #6527be;
+  }
+  &:hover {
+    color: #6527be;
   }
 `;
 

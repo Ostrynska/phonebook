@@ -3,37 +3,59 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { theme } from '../../src/components/App';
 
+import home from '../images/home.gif';
+
 export default function Home() {
   return (
-    <Container component="main" maxWidth="sm" theme={theme}>
+    <Container component="main" maxWidth="lg" theme={theme}>
       <Box
         sx={{
-          marginTop: 32,
+          marginTop: '28vh',
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: 'row',
           alignItems: 'center',
+          justifyContent: 'center',
+          gap: 20,
         }}
       >
-        <Typography
-          variant="h1"
-          color="primary.main"
-          padding={theme.spacing(4)}
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: 600,
+          }}
         >
-          PhoneBOOK
-        </Typography>
-        <Typography
-          component="h2"
-          variant="h4"
-          padding={theme.spacing(2)}
-          color="primary.dark"
-          fontWeight={700}
+          <Typography
+            variant="h1"
+            color="primary.main"
+            padding={theme.spacing(4)}
+          >
+            PhoneBOOK
+          </Typography>
+          <Typography
+            component="h2"
+            variant="h4"
+            padding={theme.spacing(6)}
+            color="primary.dark"
+            fontWeight={700}
+          >
+            Simple - Intuitive - Efficeint
+          </Typography>
+          <Typography component="p" variant=" h3" textAlign="center">
+            "Your phonebook should be easy to use and actually help you achieve
+            maximum productivity without compromising on the look and feel"
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
         >
-          Simple - Intuitive - Efficeint
-        </Typography>
-        <Typography component="h5" variant=" h3" textAlign="center">
-          "Your phonebook should be easy to use and actually help you achieve
-          maximum productivity without compromising on the look and feel"
-        </Typography>
+          <img src={home} alt="Animated GIF" width={450} />
+        </Box>
       </Box>
     </Container>
   );

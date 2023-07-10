@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
 
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
@@ -10,6 +9,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import { theme } from '../App';
+
+import { RegisterContainer } from './RegisterForm.styled';
 
 export function RegisterForm() {
   const dispatch = useDispatch();
@@ -34,66 +35,74 @@ export function RegisterForm() {
           marginTop: 16,
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
+          alignItems: 'start',
         }}
       >
-        <Avatar
-          sx={{
-            m: 1,
-            bgcolor: 'primary.main',
-            color: 'primary.contrastText',
-          }}
-        ></Avatar>
-        <Typography component="h1" variant="h5">
-          Sign up
-        </Typography>
-        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                autoComplete="given-name"
-                type="text"
-                name="name"
-                required
-                fullWidth
-                id="name"
-                label="Name"
-                autoFocus
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                type="email"
-                autoComplete="email"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="new-password"
-              />
-            </Grid>
-          </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            endIcon={<ExitToAppOutlinedIcon />}
-            sx={{ mt: 3, mb: 2 }}
+        <RegisterContainer>
+          <p>Welcome !</p>
+          <Typography component="h1" variant="h5">
+            Sign up to
+          </Typography>
+          <p>MyContact is simply</p>
+          <Box
+            component="form"
+            noValidate
+            onSubmit={handleSubmit}
+            sx={{ mt: 3 }}
           >
-            Sign Up
-          </Button>
-        </Box>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <p>User name</p>
+                <TextField
+                  autoComplete="given-name"
+                  type="text"
+                  name="name"
+                  required
+                  fullWidth
+                  id="name"
+                  placeholder="Enter your email"
+                  autoFocus
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <p>Email</p>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  placeholder="Enter your user name"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <p>Password</p>
+                <TextField
+                  required
+                  fullWidth
+                  name="password"
+                  placeholder="Enter your Password"
+                  type="password"
+                  id="password"
+                  autoComplete="new-password"
+                />
+              </Grid>
+            </Grid>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              endIcon={<ExitToAppOutlinedIcon />}
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Register
+            </Button>
+            <p>
+              Already have an Account ? <span>Register</span>
+            </p>
+          </Box>
+        </RegisterContainer>
       </Box>
     </Container>
   );

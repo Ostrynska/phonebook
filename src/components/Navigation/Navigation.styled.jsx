@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
   text-decoration: none;
-  color: #fff7e8;
+  color: #000;
   &:not(:last-child) {
     margin-right: 20px;
   }
   &.active {
     font-weight: 700;
-    color: #d85841;
+    color: #6527be;
   }
 `;

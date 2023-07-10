@@ -7,22 +7,24 @@ import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from '../redux/auth/operations';
 import { useAuth } from '../hooks/index';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import '@fontsource/montserrat';
 
 export const theme = createTheme({
-  typography: {},
+  typography: {
+    fontFamily: 'Poppins',
+    fontSize: 14,
+  },
   palette: {
     primary: {
       light: '#FFF7E8',
-      main: '#1c4931 ',
-      dark: '#d85841',
+      main: '#000 ',
+      dark: '#6527BE',
       contrastText: '#fff',
     },
     secondary: {
       light: '#9EADBB',
       main: '#FFF7E8',
-      dark: '#d85841',
-      contrastText: '#d85841',
+      dark: '#6527BE',
+      contrastText: '#6527BE',
     },
     spacing: [0, 4, 8, 16, 32, 64],
   },
