@@ -52,6 +52,7 @@ export function RegisterForm() {
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
+          gap: '45px',
         }}
       >
         <Box

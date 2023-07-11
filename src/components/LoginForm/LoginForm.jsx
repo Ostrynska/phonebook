@@ -54,6 +54,7 @@ export function LoginForm() {
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
+          gap: '45px',
         }}
       >
         <Box
