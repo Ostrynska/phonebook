@@ -8,12 +8,7 @@ import Box from '@mui/material/Box';
 import { addContact } from '../../redux/contacts/operations';
 import { selectContacts } from '../../redux/contacts/selectors';
 
-import {
-  ContactsForm,
-  // ContactsLabel,
-  // ContactsInput,
-  // ContactsButton,
-} from './ContactForm.styled';
+import { ContactsForm } from './ContactForm.styled';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -21,9 +16,9 @@ export const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const form = e.target;
-    const name = form.elements[0].value;
-    const number = form.elements[1].value;
+    const form = e.currentTarget;
+    const name = form.elements.name.value;
+    const number = form.elements.number.value;
 
     const contact = {
       name,
@@ -57,6 +52,7 @@ export const ContactForm = () => {
           id="outlined-required"
           type="text"
           name="name"
+          size="small"
           required
         />
         <TextField
@@ -64,6 +60,7 @@ export const ContactForm = () => {
           id="outlined-required"
           type="tel"
           name="number"
+          size="small"
           required
         />
         <Button variant="contained" type="submit" size="small">
