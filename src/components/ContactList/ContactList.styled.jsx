@@ -4,9 +4,10 @@ export const ContactsList = styled.ul`
   display: flex;
   margin-right: auto;
   flex-direction: column;
-  padding: 12px;
+  padding: 12px 0;
   margin: auto;
-  width: 450px;
+  width: 540px;
+  gap: 10px;
 `;
 export const ContactsListItem = styled.li`
   display: flex;
@@ -24,6 +25,6 @@ export const ContactsListButton = styled.button`
   background-color: transparent;
   &:hover,
   &:focus {
-    color: #d85841;
+    color: #6527be;
   }
 `;

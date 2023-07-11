@@ -1,13 +1,18 @@
 import Notiflix from 'notiflix';
 import { useSelector, useDispatch } from 'react-redux';
+
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+
 import { addContact } from '../../redux/contacts/operations';
 import { selectContacts } from '../../redux/contacts/selectors';
 
 import {
   ContactsForm,
-  ContactsLabel,
-  ContactsInput,
-  ContactsButton,
+  // ContactsLabel,
+  // ContactsInput,
+  // ContactsButton,
 } from './ContactForm.styled';
 
 export const ContactForm = () => {
@@ -40,15 +45,31 @@ export const ContactForm = () => {
 
   return (
     <ContactsForm onSubmit={handleSubmit}>
-      <ContactsLabel>
-        Name
-        <ContactsInput type="text" name="name" required />
-      </ContactsLabel>
-      <ContactsLabel>
-        Number
-        <ContactsInput type="tel" name="number" required />
-      </ContactsLabel>
-      <ContactsButton type="submit">Add contact</ContactsButton>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: { sm: '3.5fr 3.5fr 0.8fr' },
+          gap: 2,
+        }}
+      >
+        <TextField
+          label="Name"
+          id="outlined-required"
+          type="text"
+          name="name"
+          required
+        />
+        <TextField
+          label="Number"
+          id="outlined-required"
+          type="tel"
+          name="number"
+          required
+        />
+        <Button variant="contained" type="submit" size="small">
+          Add
+        </Button>
+      </Box>
     </ContactsForm>
   );
 };

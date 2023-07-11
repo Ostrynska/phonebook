@@ -19,7 +19,7 @@ export const UserMenu = () => {
       </Username>
       <Box margin="auto" theme={theme} onClick={() => dispatch(logOut())}>
         <Button
-          color="secondary"
+          color="primary"
           size="small"
           variant="outlined"
           fontWeight={700}

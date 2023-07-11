@@ -21,23 +21,38 @@ export default function Phonebook() {
   }, [dispatch]);
 
   return (
-    <Container component="main" maxWidth="sm" theme={theme}>
-      <Box
-        sx={{
-          marginTop: 16,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+    <Container component="main" maxWidth="lg" theme={theme}>
+      <div
+        style={{
+          borderBottom: '1px solid rgb(0, 0, 0, 0.25)',
+          paddingBottom: '40px',
         }}
       >
-        <ContactForm />
-      </Box>
+        <Box
+          sx={{
+            marginTop: 16,
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}
+        >
+          <Typography
+            component="h2"
+            variant="h4"
+            color="primary"
+            fontWeight={700}
+          >
+            Add Contact
+          </Typography>
+          <ContactForm />
+        </Box>
+      </div>
       <Box
         sx={{
           marginTop: 8,
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          flexDirection: 'row',
+          alignItems: 'start',
         }}
       >
         <Typography
@@ -48,9 +63,19 @@ export default function Phonebook() {
         >
           Contacts
         </Typography>
-        <Filter />
-        {isLoading}
-        <ContactList />
+        <Box
+          sx={{
+            display: 'flex',
+            gap: '30px',
+            flexDirection: 'column',
+            alignItems: 'center',
+            marginLeft: 'auto',
+          }}
+        >
+          <Filter />
+          {isLoading}
+          <ContactList />
+        </Box>
       </Box>
     </Container>
   );

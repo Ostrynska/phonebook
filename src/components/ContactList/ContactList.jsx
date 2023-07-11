@@ -11,9 +11,9 @@ import {
   ContactsListButton,
 } from './ContactList.styled';
 import { fetchContacts } from '../../redux/contacts/operations';
-import { IoTrashBinOutline } from 'react-icons/io5';
+import { FiTrash2 } from 'react-icons/fi';
 import { IconContext } from 'react-icons';
-import { MdContactPage } from 'react-icons/md';
+import { AiOutlineUser } from 'react-icons/ai';
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
@@ -36,8 +36,8 @@ const ContactList = () => {
     <ContactsList>
       {filterContacts?.map(({ id, name, number }) => (
         <ContactsListItem key={id}>
-          <IconContext.Provider value={{ color: '#d85841' }}>
-            <MdContactPage />
+          <IconContext.Provider value={{ color: '#6527BE' }}>
+            <AiOutlineUser />
           </IconContext.Provider>
           <ContactsListInf>
             <b>{name}: </b>
@@ -48,7 +48,7 @@ const ContactList = () => {
             name={name}
             onClick={() => dispatch(deleteContact(id))}
           >
-            <IoTrashBinOutline />
+            <FiTrash2 />
           </ContactsListButton>
         </ContactsListItem>
       ))}
