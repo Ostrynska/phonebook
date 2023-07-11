@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
 
@@ -12,6 +13,8 @@ import Container from '@mui/material/Container';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import { theme } from '../App';
 
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
+
 import home from '../../images/auth.svg';
 
 import {
@@ -19,10 +22,17 @@ import {
   AccountText,
   LinkStyled,
   FormControl,
+  Password,
 } from '../RegisterForm/RegisterForm.styled';
 
 export function LoginForm() {
+  const [passwordShown, setPasswordShown] = useState(false);
+
   const dispatch = useDispatch();
+
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -85,10 +95,17 @@ export function LoginForm() {
                     fullWidth
                     name="password"
                     placeholder="Enter your Password"
-                    type="password"
+                    type={passwordShown ? 'text' : 'password'}
                     id="password"
                     autoComplete="new-password"
                   />
+                  <Password onClick={togglePassword}>
+                    {passwordShown ? (
+                      <AiFillEyeInvisible size={25} />
+                    ) : (
+                      <AiFillEye size={25} />
+                    )}
+                  </Password>
                 </Grid>
               </Grid>
               <FormControl>

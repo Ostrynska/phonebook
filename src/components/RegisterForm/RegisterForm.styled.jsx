@@ -49,3 +49,9 @@ export const LinkStyled = styled(Link)`
 export const FormControl = styled.div`
   margin-top: 15px;
 `;
+
+export const Password = styled.div`
+  position: relative;
+  top: -41px;
+  left: 379px;
+`;
