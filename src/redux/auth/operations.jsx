@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://phonebook-project.onrender.com/';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+// axios.defaults.baseURL = 'https://nodejs-rest-api-whud.onrender.com/';
 
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
