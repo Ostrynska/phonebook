@@ -21,7 +21,7 @@ export const AppBarNavigation = () => {
               sx={{
                 mr: 6,
                 fontWeight: 800,
-                fontSize: 20,
+                fontSize: { xs: 18, md: 20 },
               }}
             >
               MyContacts
