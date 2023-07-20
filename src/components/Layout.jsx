@@ -5,7 +5,7 @@ import { Suspense } from 'react';
 export const Layout = () => {
   return (
     <div>
-      <AppBarNavigation />
+      {/* <AppBarNavigation /> */}
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>

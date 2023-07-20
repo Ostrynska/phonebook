@@ -32,7 +32,7 @@ export default function Phonebook() {
           sx={{
             marginTop: '18vh',
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: { xs: 'column', md: 'row' },
             alignItems: 'center',
           }}
         >
@@ -41,6 +41,9 @@ export default function Phonebook() {
             variant="h4"
             color="primary"
             fontWeight={700}
+            sx={{
+              marginBottom: { xs: '20px', md: '0px' },
+            }}
           >
             Add Contact
           </Typography>
@@ -51,8 +54,9 @@ export default function Phonebook() {
         sx={{
           marginTop: 8,
           display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'start',
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         <Typography
@@ -60,6 +64,10 @@ export default function Phonebook() {
           variant="h4"
           color="primary"
           fontWeight={700}
+          sx={{
+            marginBottom: { xs: '20px', md: '0px' },
+            textAlign: 'center',
+          }}
         >
           Contacts
         </Typography>
@@ -69,7 +77,7 @@ export default function Phonebook() {
             gap: '30px',
             flexDirection: 'column',
             alignItems: 'center',
-            marginLeft: 'auto',
+            // marginLeft: { xs: '0px', sm: 'auto' },
           }}
         >
           <Filter />

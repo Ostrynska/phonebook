@@ -2,17 +2,30 @@ import styled from 'styled-components';
 
 export const ContactsList = styled.ul`
   display: flex;
-  margin-right: auto;
+
   flex-direction: column;
   padding: 12px 0;
-  margin: auto;
-  width: 540px;
+  width: 290px;
   gap: 10px;
+  @media screen and (min-width: 600px) {
+    width: 570px;
+  }
+  @media screen and (min-width: 900px) {
+    margin: auto;
+  }
+  @media screen and (min-width: 960px) {
+    width: 540px;
+    margin-right: auto;
+  }
 `;
 export const ContactsListItem = styled.li`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: baseline;
+  @media screen and (min-width: 960px) {
+    align-items: center;
+    justify-content: baseline;
+  }
 `;
 export const ContactsListInf = styled.p`
   margin-left: 10px;

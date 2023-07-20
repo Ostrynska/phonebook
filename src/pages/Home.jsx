@@ -1,32 +1,10 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-// import { theme } from '../../src/components/App';
-
 import { useTheme } from '@mui/material/styles';
-import styled from 'styled-components';
+
+import StyledContainer from '../components/StyledContainer/StyledContainer';
 
 import home from '../images/home.gif';
-
-const StyledContainer = styled(Container)`
-  max-width: 100%;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.values.sm}px) {
-    max-width: 600px;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.values.md}px) {
-    max-width: 960px;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.values.lg}px) {
-    max-width: 1200px;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.values.xl}px) {
-    max-width: 1440px;
-  }
-`;
 
 export default function Home() {
   const theme = useTheme();
