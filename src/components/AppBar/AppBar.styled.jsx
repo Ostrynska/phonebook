@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
+import IconButton from '@mui/material/IconButton';
+import Drawer from '@mui/material/Drawer';
 import { Toolbar } from '@mui/material';
 
 export const AppBarStyled = styled(AppBar)`
@@ -19,4 +21,15 @@ export const Link = styled(NavLink)`
 
 export const AppToolbar = styled(Toolbar)`
   box-shadow: none;
+`;
+
+export const MenuIcon = styled(IconButton)`
+  color: #000000;
+  font-size: 24px;
+`;
+
+export const DrawerStyled = styled(Drawer)`
+  width: 100vw;
+  background-color: #ffff;
+  position: relative;
 `;
