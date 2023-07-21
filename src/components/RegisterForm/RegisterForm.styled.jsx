@@ -5,9 +5,14 @@ export const RegisterContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 21px 41px;
-  width: 505px;
-  height: 701px;
+  padding: 51px 32px;
+  width: 325px;
+  @media screen and (min-width: 600px) {
+    padding: 21px 41px;
+    width: 505px;
+    height: 701px;
+  }
+
   border: 0.5px solid #878787;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -53,5 +58,8 @@ export const FormControl = styled.div`
 export const Password = styled.div`
   position: relative;
   top: -41px;
-  left: 379px;
+  left: 227px;
+  @media screen and (min-width: 600px) {
+    left: 379px;
+  }
 `;

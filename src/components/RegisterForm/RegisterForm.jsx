@@ -52,7 +52,8 @@ export function RegisterForm() {
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
-          gap: '45px',
+          justifyContent: 'center',
+          gap: { lg: '45px' },
         }}
       >
         <Box
@@ -138,11 +139,17 @@ export function RegisterForm() {
         </Box>
         <Box
           sx={{
-            display: 'flex',
+            display: { xs: 'none', lg: 'flex' },
             alignItems: 'center',
+            maxWidth: '100%',
           }}
         >
-          <img src={home} alt="Home" width={598} />
+          <img
+            src={home}
+            alt="Home"
+            width={598}
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
         </Box>
       </Box>
     </Container>
