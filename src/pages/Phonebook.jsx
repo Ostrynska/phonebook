@@ -55,8 +55,8 @@ export default function Phonebook() {
           marginTop: 8,
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
-          alignItems: 'center',
-          justifyContent: 'center',
+          alignItems: { xs: 'center', md: 'start' },
+          justifyContent: { xs: 'center', md: 'start' },
         }}
       >
         <Typography
@@ -77,7 +77,7 @@ export default function Phonebook() {
             gap: '30px',
             flexDirection: 'column',
             alignItems: 'center',
-            // marginLeft: { xs: '0px', sm: 'auto' },
+            marginLeft: { md: 'auto' },
           }}
         >
           <Filter />

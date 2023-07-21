@@ -11,11 +11,10 @@ export const ContactsList = styled.ul`
     width: 570px;
   }
   @media screen and (min-width: 900px) {
-    margin: auto;
+    margin-right: auto;
   }
   @media screen and (min-width: 960px) {
     width: 540px;
-    margin-right: auto;
   }
 `;
 export const ContactsListItem = styled.li`
