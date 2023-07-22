@@ -12,3 +12,10 @@ export const Link = styled(NavLink)`
     color: #6527be;
   }
 `;
+
+export const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+`;

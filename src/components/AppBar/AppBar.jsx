@@ -58,6 +58,9 @@ export const AppBarNavigation = () => {
             anchor="right"
             open={open}
             onClose={toggleDrawer(false)}
+            sx={{
+              width: 240,
+            }}
           >
             <NavigationMob />
             {isLoggedIn ? <UserMenuMob /> : <AuthNavMob />}

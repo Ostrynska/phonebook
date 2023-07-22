@@ -11,13 +11,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const WrapperMob = styled.div`
-  display: flex;
-  margin-left: auto;
-  gap: 12px;
-  align-items: center;
-  justify-content: center;
-`;
+export const WrapperMob = styled.div``;
 
 export const Username = styled.p`
   color: #000;

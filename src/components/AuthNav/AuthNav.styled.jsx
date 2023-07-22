@@ -30,5 +30,6 @@ export const Wrapper = styled.div`
 
 export const WrapperMob = styled.div`
   display: flex;
-  margin-left: auto;
+  flex-direction: column;
+  gap: 20px;
 `;

@@ -29,6 +29,7 @@ export const MenuIconBtn = styled(IconButton)`
 `;
 
 export const DrawerStyled = styled(Drawer)`
+  padding: 40px;
   width: 100vw;
   background-color: #ffff;
   position: relative;
