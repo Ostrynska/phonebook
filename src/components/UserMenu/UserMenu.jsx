@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/auth/operations';
 import { useAuth } from '../../hooks/index';
 
-import { Wrapper, Username, Name } from './UserMenu.styled';
+import { Wrapper, WrapperMob, Username, Name } from './UserMenu.styled';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -29,5 +29,29 @@ export const UserMenu = () => {
         </Button>
       </Box>
     </Wrapper>
+  );
+};
+
+export const UserMenuMob = () => {
+  const dispatch = useDispatch();
+  const { user } = useAuth();
+
+  return (
+    <WrapperMob>
+      <Username>
+        Welcome, <Name>{user.name}</Name>
+      </Username>
+      <Box margin="auto" theme={theme} onClick={() => dispatch(logOut())}>
+        <Button
+          color="primary"
+          size="small"
+          variant="outlined"
+          fontWeight={700}
+          startIcon={<LogoutIcon />}
+        >
+          Logout
+        </Button>
+      </Box>
+    </WrapperMob>
   );
 };

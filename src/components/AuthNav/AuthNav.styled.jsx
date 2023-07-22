@@ -21,6 +21,14 @@ export const ButtonLink = styled(Button)`
 `;
 
 export const Wrapper = styled.div`
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: flex;
+    margin-left: auto;
+  }
+`;
+
+export const WrapperMob = styled.div`
   display: flex;
   margin-left: auto;
 `;

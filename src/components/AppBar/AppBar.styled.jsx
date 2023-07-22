@@ -23,7 +23,7 @@ export const AppToolbar = styled(Toolbar)`
   box-shadow: none;
 `;
 
-export const MenuIcon = styled(IconButton)`
+export const MenuIconBtn = styled(IconButton)`
   color: #000000;
   font-size: 24px;
 `;

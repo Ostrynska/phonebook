@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: flex;
+    margin-left: auto;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export const WrapperMob = styled.div`
   display: flex;
   margin-left: auto;
   gap: 12px;
