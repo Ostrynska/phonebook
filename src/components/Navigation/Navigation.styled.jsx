@@ -13,9 +13,15 @@ export const Link = styled(NavLink)`
   }
 `;
 
-export const Nav = styled.nav`
+export const NavMob = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-bottom: 20px;
+`;
+export const Nav = styled.nav`
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: flex;
+  }
 `;

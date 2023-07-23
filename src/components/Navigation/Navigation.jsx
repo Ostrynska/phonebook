@@ -1,19 +1,19 @@
-import { Link, Nav } from './Navigation.styled';
+import { Link, Nav, NavMob } from './Navigation.styled';
 import { useAuth } from '../../hooks/index';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
-  return <nav>{isLoggedIn && <Link to="/contacts">Phonebook</Link>}</nav>;
+  return <Nav>{isLoggedIn && <Link to="/contacts">Phonebook</Link>}</Nav>;
 };
 
 export const NavigationMob = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <Nav>
+    <NavMob>
       <Link to="/">Home</Link>
       {isLoggedIn && <Link to="/contacts">Phonebook</Link>}
-    </Nav>
+    </NavMob>
   );
 };
