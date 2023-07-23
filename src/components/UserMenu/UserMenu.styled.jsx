@@ -11,7 +11,12 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const WrapperMob = styled.div``;
+export const WrapperMob = styled.div`
+  margin-top: auto;
+  margin-right: 0;
+  width: 200px;
+  height: auto;
+`;
 
 export const Username = styled.p`
   color: #000;

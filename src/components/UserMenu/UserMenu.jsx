@@ -41,7 +41,12 @@ export const UserMenuMob = () => {
       <Username>
         Welcome, <Name>{user.name}</Name>
       </Username>
-      <Box margin="auto" theme={theme} onClick={() => dispatch(logOut())}>
+      <Box
+        margin="auto"
+        theme={theme}
+        onClick={() => dispatch(logOut())}
+        sx={{ marginTop: 2 }}
+      >
         <Button
           color="primary"
           size="small"

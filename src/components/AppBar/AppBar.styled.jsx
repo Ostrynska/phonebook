@@ -29,8 +29,14 @@ export const MenuIconBtn = styled(IconButton)`
 `;
 
 export const DrawerStyled = styled(Drawer)`
-  padding: 40px;
-  width: 100vw;
-  background-color: #ffff;
   position: relative;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+`;
+
+export const Modal = styled.div`
+  padding: 40px;
+  width: 70vw;
+  height: 100vh;
 `;

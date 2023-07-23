@@ -14,6 +14,7 @@ import {
   AppToolbar,
   MenuIconBtn,
   DrawerStyled,
+  Modal,
 } from './AppBar.styled';
 
 export const AppBarNavigation = () => {
@@ -32,7 +33,7 @@ export const AppBarNavigation = () => {
             <Typography
               variant="h6"
               sx={{
-                mr: 6,
+                mr: { xs: 3, md: 6 },
                 fontWeight: 800,
                 fontSize: { xs: 18, md: 20 },
               }}
@@ -54,18 +55,21 @@ export const AppBarNavigation = () => {
           >
             <MenuIcon />
           </MenuIconBtn>
-          <DrawerStyled
-            anchor="right"
-            open={open}
-            onClose={toggleDrawer(false)}
-            sx={{
-              width: 240,
-            }}
-          >
-            <NavigationMob />
-            {isLoggedIn ? <UserMenuMob /> : <AuthNavMob />}
-          </DrawerStyled>
         </AppToolbar>
+        <DrawerStyled anchor="right" open={open} onClose={toggleDrawer(false)}>
+          <Modal>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+              }}
+            >
+              <NavigationMob />
+              {isLoggedIn ? <UserMenuMob /> : <AuthNavMob />}
+            </div>
+          </Modal>
+        </DrawerStyled>
       </Container>
     </AppBarStyled>
   );
